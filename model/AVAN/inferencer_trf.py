@@ -37,10 +37,7 @@ else:
 #================================================
 # set device
 #================================================
-# os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-# os.environ["CUDA_VISIBLE_DEVICES"] = params['gpu']
 print(config['local_rank'])
-
 torch.cuda.set_device(config['local_rank'])
 torch.backends.cudnn.benchmark = True
 device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
