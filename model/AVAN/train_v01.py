@@ -178,9 +178,7 @@ class Trainer():
                 loss_G_recon = self.loss_obj_G(yhat, tar, self.latw)
                 # loss_G_adv = self.loss_obj_D(out_fake, label_real)
                 loss_G_adv = torch.nn.functional.binary_cross_entropy_with_logits(out_fake, label_real)
-                # loss_G = (loss_G_recon * 0.8) + (loss_G_adv * 0.2)
-                loss_G = (loss_G_recon * 0.6) + (loss_G_adv * 0.4)
-                # loss_G = (loss_G_recon * 0.4) + (loss_G_adv * 0.6)
+                loss_G = (loss_G_recon * 0.4) + (loss_G_adv * 0.6)
 
             # parameter update (back propagation)
             self.gscaler_G.scale(loss_G).backward()
@@ -195,8 +193,6 @@ class Trainer():
                 out_real = self.discriminator(tar)
 
                 # loss
-                # loss_D_adv1 = self.loss_obj_D(out_fake, label_fake)
-                # loss_D_adv2 = self.loss_obj_D(out_real, label_real)
                 loss_D_adv1 = torch.nn.functional.binary_cross_entropy_with_logits(out_fake, label_fake)
                 loss_D_adv2 = torch.nn.functional.binary_cross_entropy_with_logits(out_real, label_real)
                 loss_D = (loss_D_adv1 + loss_D_adv2)
@@ -288,14 +284,6 @@ class Trainer():
         self.optimizer_D.load_state_dict(checkpoint['optimizer_D_state_dict'])
 
 if __name__ == '__main__':
-
-    # # set ArgmentParser
-    # parser = argparse.ArgumentParser(add_help=False)
-    # parser.add_argument('--global_rank', type=int, default=0)
-    # parser.add_argument('--num_workers', type=int, default=24)
-    # parser.add_argument("--local_rank", type=int,
-    #                 help="Local rank. Necessary for using the torch.distributed.launch utility.")
-    # parser.add_argument('--world_size', type=int, default=0)
 
     # get global_rank, local_rank, world_size
     # global_rank = int(os.environ['RANK'])
