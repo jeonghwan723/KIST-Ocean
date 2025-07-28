@@ -18,13 +18,6 @@ class get_data(Dataset):
         # sorting
         self.inp_flist.sort()
         self.tar_flist.sort()
-
-        # removing latest year
-        if self.inp_path.split('/')[-2] == 'CESM2_tr_inp':
-            self.inp_flist.remove('/home/jhkim/task/ocean2/model/dataset/CESM2_tr_inp/CESM2_012_inp_2014.nc')
-            self.inp_flist.remove('/home/jhkim/task/ocean2/model/dataset/CESM2_tr_inp/CESM2_013_inp_2004.nc')
-            self.tar_flist.remove('/home/jhkim/task/ocean2/model/dataset/CESM2_tr_tar/CESM2_012_tar_2014.nc')
-            self.tar_flist.remove('/home/jhkim/task/ocean2/model/dataset/CESM2_tr_tar/CESM2_013_tar_2004.nc')
             
         # get data stats
         self.nyr = len(self.inp_flist)
