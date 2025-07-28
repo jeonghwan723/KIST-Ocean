@@ -17,7 +17,7 @@ The Korea Institute of Science and Technology's ocean model (KIST-Ocean) was dev
 >>>> <code>inferencer_GT.py</code>: Python script for inferring the future ocean state by prescribing ground truth (observation) as the surface boundary condition (i.e., generating KIST-O_GT)
 >>>
 >>> <code>output/</code>: Directory where the trained model is saved
-
+>>
 >> <code>data/</code>: Statistical datasets required for training and inference
 
 ## Requirements
