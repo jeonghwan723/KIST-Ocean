@@ -4,7 +4,7 @@ The Korea Institute of Science and Technology's ocean model (KIST-Ocean) was dev
 ## Repository structure
 > <code>KIST-Ocean/</code>: main directory
 >> <code>model/</code>
->>> <code>AVAN/</code>: Python scripts for training KIST-Ocean model
+>>> <code>AVAN/</code>
 >>>
 >>>> <code>train_v01.py</code>: Python script for training KIST-OCean
 >>>> 
