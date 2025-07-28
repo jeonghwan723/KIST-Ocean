@@ -1,24 +1,24 @@
 # KIST-Ocean
-The Korea Institute of Science and Technology's Ocean model (KIST-Ocean) was developed based on a visual attention adversarial network composed of a generator and a discriminator (Guo et al., 2023; Li et al., 2023).
+The Korea Institute of Science and Technology's ocean model (KIST-Ocean) was developed based on a visual attention adversarial network composed of a generator and a discriminator (Guo et al., 2023; Li et al., 2023), designed to simulate the global three-dimensional ocean.
 
 ## Repository structure
-> KIST-Ocean/: main directory
->> model/
->>> AVAN/: Python scripts for training KIST-Ocean model
+> <code>KIST-Ocean/</code>: main directory
+>> <code>model/</code>
+>>> <code>AVAN/</code>: Python scripts for training KIST-Ocean model
 >>>
->>>> train_v01.py: Python script for training KIST-OCean
+>>>> <code>train_v01.py</code>: Python script for training KIST-OCean
 >>>> 
->>>> config.py: Configuration for training and inference
+>>>> <code>config.py</code>: Configuration for training and inference
 >>>> 
->>>> AVAN_v01.py: Python script for the backbone of the KIST-Ocean model
+>>>> <code>AVAN_v01.py</code>: Python script for the backbone of the KIST-Ocean model
 >>>> 
->>>> utils.py: Python script for containing various utility functions
+>>>> <code>utils.py</code>: Python script for containing various utility functions
 >>>> 
->>>> inferencer_GT.py: Python script for inferring the future ocean state by prescribing ground truth (observation) as the surface boundary condition (i.e., generating KIST-O_GT)
+>>>> <code>inferencer_GT.py</code>: Python script for inferring the future ocean state by prescribing ground truth (observation) as the surface boundary condition (i.e., generating KIST-O_GT)
 >>>
->>> output/: Directory where the trained model is saved
+>>> <code>output/</code>: Directory where the trained model is saved
 
->> data/: Statistical datasets required for training and inference
+>> <code>data/</code>: Statistical datasets required for training and inference
 
 ## Requirements
 - python v3.8.17
