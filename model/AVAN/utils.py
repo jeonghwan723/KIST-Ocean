@@ -44,29 +44,3 @@ def lat_weight(ydim, lat1=-90, lat2=90):
 
     return torch.as_tensor(weight)
 
-
-# def lat_weight(ydim, lat1=-90, lat2=90):
-
-#     # compute interval
-#     intv = (lat2 - lat1) / ydim
-
-#     # generate lower bound list
-#     lat_low = np.arange(lat1, lat2, intv)
-#     lat_up = np.arange(lat1+intv, lat2+1e-08, intv)
-
-#     # convert to radians
-#     lat_low = np.radians(lat_low)
-#     lat_up = np.radians(lat_up)
-
-#     # compute weights
-#     weight = np.zeros((ydim))
-#     for i in range(ydim):
-#         weight[i] = (np.sin(lat_up[i]) - np.sin(lat_low[i])) / np.mean(np.sin(lat_up) - np.sin(lat_low))
-
-#     return torch.as_tensor(weight)
-
-
-
-
-
-
