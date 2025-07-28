@@ -27,12 +27,6 @@ def config_v01():
     #======================================================
     # input & target files
     #======================================================
-    # config['tr_inp_path'] = '/home/jhkim/task/ocean2/model/dataset/CESM2_tr_inp/'
-    # config['tr_tar_path'] = '/home/jhkim/task/ocean2/model/dataset/CESM2_tr_tar/'
-    # config['val_inp_path'] = '/home/jhkim/task/ocean2/model/dataset/CESM2_val_inp/'
-    # config['val_tar_path'] = '/home/jhkim/task/ocean2/model/dataset/CESM2_val_tar/'
-    # config['test_inp_path'] = '/home/jhkim/task/ocean2/model/dataset/CESM2_val_inp/'
-
     config['tr_inp_path'] = '/home/jhkim/task/ocean2/model/dataset/GODAS_tr_inp/'
     config['tr_tar_path'] = '/home/jhkim/task/ocean2/model/dataset/GODAS_tr_tar/'
     config['val_inp_path'] = '/home/jhkim/task/ocean2/model/dataset/GODAS_val_inp/'
@@ -45,10 +39,6 @@ def config_v01():
     #======================================================
     # Stats for reconstruction in inference (i.e., standardized -> original)
     #======================================================
-    # config['test_avg'] = '/home/jhkim/task/ocean2/data/CESM2_AVG_013.nc'
-    # config['test_std'] = '/home/jhkim/task/ocean2/data/CESM2_STD_013.nc'
-    # config['test_clim'] = '/home/jhkim/task/ocean2/data/CESM2_CLIM_FRC.nc'
-
     config['test_avg'] = '/home/jhkim/task/ocean2/data/OBS_AVG.nc'
     config['test_std'] = '/home/jhkim/task/ocean2/data/OBS_STD.nc'
     config['test_clim'] = '/home/jhkim/task/ocean2/data/OBS_CLIM_FRC.nc'
@@ -56,10 +46,6 @@ def config_v01():
     #======================================================
     # Land mask files (0: land, 1: ocean)
     #======================================================
-    # config['tr_mask'] = '/home/jhkim/task/ocean2/data/Landmask_CESM2.nc'
-    # config['val_mask'] = '/home/jhkim/task/ocean2/data/Landmask_CESM2.nc'
-    # config['test_mask'] = '/home/jhkim/task/ocean2/data/Landmask_CESM2.nc'
-
     config['tr_mask'] = '/home/jhkim/task/ocean2/data/Landmask_GODAS.nc'
     config['val_mask'] = '/home/jhkim/task/ocean2/data/Landmask_GODAS.nc'
     config['test_mask'] = '/home/jhkim/task/ocean2/data/Landmask_GODAS.nc'
@@ -67,7 +53,7 @@ def config_v01():
     #======================================================
     # output path
     #======================================================
-    config['o_path'] = '/home/jhkim/task/ocean2/model/output/AVAN_v01_0.6/'
+    config['o_path'] = '/home/jhkim/task/ocean2/model/output/AVAN_v01/'
     config['test_name'] = 'FCST_GODAS_trf/'
 
     #======================================================
