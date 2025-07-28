@@ -6,7 +6,7 @@ The Korea Institute of Science and Technology's ocean model (KIST-Ocean) was dev
 >> <code>model/</code>
 >>> <code>AVAN/</code>
 >>>
->>>> <code>train_v01.py</code>: Python script for training KIST-OCean
+>>>> <code>train_v01.py</code>: Python script for training KIST-Ocean
 >>>> 
 >>>> <code>config.py</code>: Configuration for training and inference
 >>>> 
