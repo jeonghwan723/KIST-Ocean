@@ -36,6 +36,7 @@ The Korea Institute of Science and Technology's ocean model (KIST-Ocean) was dev
 - CUDA version: 11.7
 
 ## References
+- Kim, J. H., Kang, D., Yang, Y. M., Park, J. H., & Ham, Y. G. Data-driven global ocean model resolving atmospherically forced ocean dynamics. Science Advances, 12, (2026).
 - Guo, M.-H., Lu, C.-Z., Liu, Z.-N., Cheng, M.-M. & Hu, S.-M. Visual attention network. Comput. Vis. Media. 9, 733–752 (2023).
 - Li, T., Yang, F. & Song, Y. Visual Attention Adversarial Networks for Chinese Font Translation. Electronics 12, 1388 (2023).
 
