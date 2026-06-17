@@ -4,6 +4,8 @@
 
 KIST-Ocean (Korea Institute of Science and Technology – Ocean model) is a data-driven model that simulates the global three-dimensional ocean. It is designed to act as the ocean component of a coupled ocean–atmosphere system, producing only oceanic variables in the same role a dynamical OGCM would play.
 
+This is the model proposed in Kim et al. (2026), *Science Advances* (see [Citation](#citation)).
+
 ## Overview
 
 - **Inputs:** 62 oceanic variables + 6 surface boundary conditions
@@ -77,8 +79,19 @@ For evaluation, both modes were generated for 2014–2023 and compared against p
 - GPU: Nvidia A100
 - CUDA version: 11.7
 
-## References
-- Kim, J. H., Kang, D., Yang, Y. M., Park, J. H., & Ham, Y. G. Data-driven global ocean model resolving atmospherically forced ocean dynamics. Science Advances, 12, (2026).
-- Guo, M.-H., Lu, C.-Z., Liu, Z.-N., Cheng, M.-M. & Hu, S.-M. Visual attention network. Comput. Vis. Media. 9, 733–752 (2023).
-- Li, T., Yang, F. & Song, Y. Visual Attention Adversarial Networks for Chinese Font Translation. Electronics 12, 1388 (2023).
+## Citation
+
+If you use KIST-Ocean in your work, please cite:
+
+> Kim, J. H., Kang, D., Yang, Y. M., Park, J. H., & Ham, Y. G. (2026). Data-driven global ocean model resolving atmospherically forced ocean dynamics. *Science Advances*, 12.
+
+```bibtex
+@article{kim2026kistocean,
+  title   = {Data-driven global ocean model resolving atmospherically forced ocean dynamics},
+  author  = {Kim, J. H. and Kang, D. and Yang, Y. M. and Park, J. H. and Ham, Y. G.},
+  journal = {Science Advances},
+  volume  = {12},
+  year    = {2026}
+}
+```
 
