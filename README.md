@@ -8,7 +8,7 @@ This is the model proposed in Kim et al. (2026), *Science Advances* (see [Citati
 
 <p align="center">
   <img src="assets/Fig_1.png" alt="Model architecture" width="800"><br>
-  <em>Overview of the Korea Institute of Science and Technology’s Ocean model (KIST-Ocean), including its training and inference processes. (A) Generator architecture. For details on the visual attention network (VAN) stages, down-sampling blocks, and up-sampling blocks. </em>
+  <em>Overview of the Korea Institute of Science and Technology’s Ocean model (KIST-Ocean), including its training and inference processes.</em>
 </p>
 
 ## Overview
