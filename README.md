@@ -7,7 +7,7 @@ KIST-Ocean (Korea Institute of Science and Technology – Ocean model) is a data
 This is the model proposed in Kim et al. (2026), *Science Advances* (see [Citation](#citation)).
 
 <p align="center">
-  <img src="assets/Fig_1.png" alt="Model architecture" width="600"><br>
+  <img src="assets/Fig_1.png" alt="Model architecture" width="800"><br>
   <em>Overview of the Korea Institute of Science and Technology’s Ocean model (KIST-Ocean), including its training and inference processes. (A) Generator architecture. For details on the visual attention network (VAN) stages, down-sampling blocks, and up-sampling blocks. </em>
 </p>
 
