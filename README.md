@@ -1,5 +1,47 @@
 # KIST-Ocean
-The Korea Institute of Science and Technology's ocean model (KIST-Ocean) was developed based on a visual attention adversarial network composed of a generator and a discriminator (Guo et al., 2023; Li et al., 2023), designed to simulate the global three-dimensional ocean.
+
+**A U-shaped visual attention adversarial network for global 3D ocean simulation.**
+
+KIST-Ocean (Korea Institute of Science and Technology – Ocean model) is a data-driven model that simulates the global three-dimensional ocean. It is designed to act as the ocean component of a coupled ocean–atmosphere system, producing only oceanic variables in the same role a dynamical OGCM would play.
+
+## Overview
+
+- **Inputs:** 62 oceanic variables + 6 surface boundary conditions
+- **Outputs:** oceanic variables only — 2 surface variables and 4 three-dimensional variables on 15 vertical levels (5–600 m subsurface)
+- **Time step:** 5 days; all input and output fields are 5-day averages
+- **Size:** 6.6 million parameters
+- **Compute (single NVIDIA A100):** ~33.3 h pretraining + ~2.4 h fine-tuning; a 200-day simulation runs in 6–7 s
+
+## Key design choices
+
+**1. Visual Attention Network (VAN) in a U-shaped backbone.**
+VAN is a large-kernel, attention-based convolutional architecture that splits convolution into spatial and channel-wise operations, giving a large receptive field with relatively few parameters. Wrapping it in a U-shaped encoder–decoder adds multi-scale feature extraction and global context: dimensionality is reduced during down-sampling and restored during up-sampling, while skip connections preserve information and fuse local and global features. This keeps the model efficient and stable even with limited training data — enabling a full global 3D ocean model at just 6.6M parameters.
+
+**2. Partial convolution for coastlines.**
+Gridded ocean data mix ocean and land at the coast, and standard CNNs share kernels across the grid, which tends to smooth out the strong variability near coastlines. Partial convolution excludes masked (land) cells during convolution, reducing land-induced distortion and better capturing complex coastal variability.
+
+**3. Adversarial training to control rollout drift.**
+Autoregressive forecasting (feeding outputs back as inputs) is prone to unrealistic distribution drift over long lead times. KIST-Ocean uses a conditional GAN to keep the output distribution aligned with the ground truth. The discriminator follows the PatchGAN design, scoring many local patches independently rather than emitting a single score for the whole field.
+
+## Training
+
+KIST-Ocean uses a transfer-learning strategy for sufficient data and stable optimization:
+
+- **Pretraining:** CESM2 Large Ensemble long-term simulations, 1850–2014 (2 ensemble members, 23,360 samples)
+- **Fine-tuning:** ocean reanalysis, 1982–2013 (2,336 samples)
+
+The generator and discriminator are trained adversarially.
+
+## Inference
+
+At inference, KIST-Ocean runs autoregressively, reusing its outputs as the next inputs. Repeating this 40 times produces simulations up to 200 days ahead.
+
+Because the model does not predict surface boundary conditions, these must be prescribed, giving two simulation modes that bound its capability:
+
+- **KIST-O_GT** — boundary conditions set to ground truth (upper bound)
+- **KIST-O_Clim** — boundary conditions set to climatology, the time-invariant input a coupler can supply (lower bound)
+
+For evaluation, both modes were generated for 2014–2023 and compared against persistence and the North American Multi-Model Ensemble (NMME) dynamical seasonal prediction models.
 
 ## Repository structure
 > <code>KIST-Ocean/</code>: main directory
