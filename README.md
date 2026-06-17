@@ -6,6 +6,11 @@ KIST-Ocean (Korea Institute of Science and Technology – Ocean model) is a data
 
 This is the model proposed in Kim et al. (2026), *Science Advances* (see [Citation](#citation)).
 
+<p align="center">
+  <img src="assets/Fig_1.png" alt="Model architecture" width="600"><br>
+  <em>Overview of the Korea Institute of Science and Technology’s Ocean model (KIST-Ocean), including its training and inference processes. (A) Generator architecture. For details on the visual attention network (VAN) stages, down-sampling blocks, and up-sampling blocks. (B) Discriminator architecture. DW Conv and MP denote depth-wise convolution and max pooling, respectively, while GELU indicates the Gaussian Error Linear Unit activation function. (C) Training process. The model was trained using a generative adversarial network (GAN) framework, in which the generator and discriminator learn in competition. The generator receives ocean and surface boundary forcing variables (denoted as OCN vars and Froc vars, respectively) and simulates ocean variables five days ahead. (D) Inference process. The figure illustrates how KIST-Ocean generates future ocean states after training is complete.</em>
+</p>
+
 ## Overview
 
 - **Inputs:** 62 oceanic variables + 6 surface boundary conditions
