@@ -83,7 +83,7 @@ For evaluation, both modes were generated for 2014–2023 and compared against p
 
 If you use KIST-Ocean in your work, please cite:
 
-> Kim, J. H., Kang, D., Yang, Y. M., Park, J. H., & Ham, Y. G. (2026). Data-driven global ocean model resolving atmospherically forced ocean dynamics. *Science Advances*, 12.
+> Kim, J. H., Kang, D., Yang, Y. M., Park, J. H., & Ham, Y. G. (2026). Data-driven global ocean model resolving atmospherically forced ocean dynamics. *Science Advances*, 12(24), eaed1225. https://doi.org/10.1126/sciadv.aed1225
 
 ```bibtex
 @article{kim2026kistocean,
@@ -91,7 +91,22 @@ If you use KIST-Ocean in your work, please cite:
   author  = {Kim, J. H. and Kang, D. and Yang, Y. M. and Park, J. H. and Ham, Y. G.},
   journal = {Science Advances},
   volume  = {12},
-  year    = {2026}
+  number  = {24},
+  pages   = {eaed1225},
+  year    = {2026},
+  doi     = {10.1126/sciadv.aed1225}
 }
 ```
+
+## Figures & License
+
+Figures in this repository are from the published article and are licensed
+under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/):
+
+> Kim, J. H., Kang, D., Yang, Y. M., Park, J. H., & Ham, Y. G. (2026).
+> Data-driven global ocean model resolving atmospherically forced ocean dynamics.
+> *Science Advances*, 12(24), eaed1225. https://doi.org/10.1126/sciadv.aed1225
+
+Note: the CC BY 4.0 license applies to the figures only. Code in this
+repository is released under the repository's [LICENSE](./LICENSE).
 
